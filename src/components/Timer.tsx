@@ -8,7 +8,8 @@ interface Props {
 }
 
 export default function Timer({ mode, setMode, onComplete, activeTaskLabel }: Props) {
-  const { secondsLeft, totalSeconds, running, completed, MODE_LABELS, DURATIONS, reset, toggle, skip } = useTimer({
+  // ✅ Remove DURATIONS from here - it's not used
+  const { secondsLeft, totalSeconds, running, completed, MODE_LABELS, reset, toggle, skip } = useTimer({
     mode,
     onComplete,
   })
