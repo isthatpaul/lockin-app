@@ -1,5 +1,4 @@
-```markdown name="README.md"
-# 🔒 lockin-app
+# lockin-app
 
 A minimalist focus cockpit for deep work sessions. Timer, tasks, ambient sounds, and streak tracking all in one distraction-free interface.
 
@@ -10,9 +9,9 @@ A minimalist focus cockpit for deep work sessions. Timer, tasks, ambient sounds,
 
 ---
 
-## ✨ Features
+## Features
 
-### ⏱️ **Pomodoro Timer**
+### **Pomodoro Timer**
 - **Focus sessions**: 25 minutes of deep work
 - **Short breaks**: 5 minutes to recharge
 - **Long breaks**: 15 minutes after 4 focus sessions
@@ -21,7 +20,7 @@ A minimalist focus cockpit for deep work sessions. Timer, tasks, ambient sounds,
 - Real-time progress ring visualization
 - Document title updates to show remaining time
 
-### ✅ **Task Management**
+### **Task Management**
 - Add, complete, and delete tasks instantly
 - Pin current task to keep focus anchored
 - Filter tasks: All, Active, Done
@@ -29,7 +28,7 @@ A minimalist focus cockpit for deep work sessions. Timer, tasks, ambient sounds,
 - Progress tracking: X/Y tasks complete today
 - Persistent storage across sessions
 
-### 🎵 **Ambient Sounds**
+### **Ambient Sounds**
 - **Rain** 🌧️ - Soothing white noise
 - **Fireplace** 🔥 - Cozy crackling fire
 - **Café** ☕ - Coffee shop ambience
@@ -46,7 +45,7 @@ A minimalist focus cockpit for deep work sessions. Timer, tasks, ambient sounds,
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Node.js 20.19+ or 22.13+
@@ -77,7 +76,7 @@ npm run preview
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 lockin-app/
@@ -105,7 +104,7 @@ lockin-app/
 
 ---
 
-## 🎨 Design System
+## Design System
 
 ### Color Palette
 
@@ -140,7 +139,7 @@ lockin-app/
 
 ---
 
-## 💾 Data Persistence
+## Data Persistence
 
 All app state is saved to **localStorage** under key `lockin.app.state.v1`:
 
@@ -159,7 +158,7 @@ All app state is saved to **localStorage** under key `lockin.app.state.v1`:
 
 ---
 
-## ⌨️ Keyboard Shortcuts
+## Keyboard Shortcuts
 
 | Shortcut | Action |
 |----------|--------|
