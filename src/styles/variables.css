@@ -1,0 +1,38 @@
+:root {
+  /* Colors */
+  --bg-0: #f4f8f8;
+  --bg-1: #e5efee;
+  --ink-1: #122325;
+  --ink-2: #395358;
+  --ink-3: #678187;
+  --card: #fdfefe;
+  --line: #c4d7d5;
+  --accent: #f1642f;
+  --accent-soft: #ffe2d8;
+  --accent-strong: #d74e1c;
+  --ok: #1d7c5f;
+  --ring-bg: #d8e6e4;
+  --ring-fill: var(--accent);
+  --shadow: 0 14px 30px rgba(20, 42, 47, 0.1);
+
+  /* Spacing */
+  --spacing-xs: 0.2rem;
+  --spacing-sm: 0.45rem;
+  --spacing-md: 0.8rem;
+  --spacing-lg: 1rem;
+  --spacing-xl: 1.3rem;
+
+  /* Typography */
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-sans: 'Space Grotesk', 'Segoe UI', sans-serif;
+  --font-size-xs: 0.74rem;
+  --font-size-sm: 0.8rem;
+  --font-size-base: 0.9rem;
+  --font-size-lg: 1.15rem;
+  --font-size-xl: 1.72rem;
+
+  /* Transitions */
+  --transition-fast: 120ms ease;
+  --transition-base: 180ms ease;
+  --transition-slow: 280ms ease;
+}

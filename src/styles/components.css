@@ -1,56 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import 'variables.css';
 
-:root {
-  --bg-0: #f4f8f8;
-  --bg-1: #e5efee;
-  --ink-1: #122325;
-  --ink-2: #395358;
-  --ink-3: #678187;
-  --card: #fdfefe;
-  --line: #c4d7d5;
-  --accent: #f1642f;
-  --accent-soft: #ffe2d8;
-  --accent-strong: #d74e1c;
-  --ok: #1d7c5f;
-  --ring-bg: #d8e6e4;
-  --shadow: 0 14px 30px rgba(20, 42, 47, 0.1);
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  background:
-    radial-gradient(circle at 85% 5%, rgba(56, 126, 129, 0.18), transparent 36%),
-    radial-gradient(circle at 15% 20%, rgba(241, 100, 47, 0.14), transparent 34%),
-    linear-gradient(160deg, var(--bg-0), var(--bg-1));
-  color: var(--ink-1);
-  font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
-}
-
-.app {
-  min-height: 100vh;
-  position: relative;
-  overflow-x: hidden;
-}
-
-.grain {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.35;
-  z-index: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.76' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
-}
-
+/* Header */
 .header {
   position: sticky;
   top: 0;
   z-index: 10;
-  padding: 1.25rem 1.2rem;
+  padding: var(--spacing-lg) 1.2rem;
   border-bottom: 1px solid rgba(18, 35, 37, 0.08);
   background: rgba(244, 248, 248, 0.86);
   backdrop-filter: blur(10px);
@@ -62,13 +17,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: var(--spacing-lg);
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: var(--spacing-sm);
 }
 
 .logo-icon {
@@ -82,8 +37,8 @@ body {
 }
 
 .logo-text {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 1.72rem;
+  font-family: var(--font-serif);
+  font-size: var(--font-size-xl);
   line-height: 1;
   letter-spacing: -0.02em;
 }
@@ -91,7 +46,7 @@ body {
 .subhead {
   margin: 0.35rem 0 0;
   color: var(--ink-2);
-  font-size: 0.86rem;
+  font-size: var(--font-size-sm);
 }
 
 .streak {
@@ -101,7 +56,7 @@ body {
   background: rgba(253, 254, 254, 0.84);
   display: flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: var(--spacing-sm);
   box-shadow: 0 6px 16px rgba(20, 42, 47, 0.08);
 }
 
@@ -118,21 +73,13 @@ body {
   opacity: 0.4;
 }
 
-@keyframes flicker {
-  from {
-    transform: translateY(0) scale(1) rotate(-1deg);
-  }
-  to {
-    transform: translateY(-1px) scale(1.07) rotate(2deg);
-  }
-}
-
 .streak-msg {
   color: var(--ink-2);
-  font-size: 0.82rem;
+  font-size: var(--font-size-sm);
   white-space: nowrap;
 }
 
+/* Main Layout */
 .main {
   position: relative;
   z-index: 1;
@@ -160,22 +107,22 @@ body {
 .metric-label {
   margin: 0;
   color: var(--ink-3);
-  font-size: 0.8rem;
+  font-size: var(--font-size-sm);
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 
 .metric-value {
-  margin: 0.45rem 0 0.4rem;
+  margin: var(--spacing-sm) 0 0.4rem;
   color: var(--ink-1);
-  font-family: 'Fraunces', Georgia, serif;
+  font-family: var(--font-serif);
   font-size: clamp(1.7rem, 1.45vw, 2rem);
   letter-spacing: -0.02em;
 }
 
 .metric-value.small {
   font-size: clamp(1rem, 1.15vw, 1.2rem);
-  font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+  font-family: var(--font-sans);
   font-weight: 600;
   line-height: 1.25;
 }
@@ -200,7 +147,7 @@ body {
   height: 100%;
   background: linear-gradient(90deg, var(--accent), #f89268);
   border-radius: inherit;
-  transition: width 280ms ease;
+  transition: width var(--transition-slow);
 }
 
 .grid {
@@ -214,7 +161,7 @@ body {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(252, 255, 255, 0.6));
   border-radius: 20px;
   border: 1px solid var(--line);
-  padding: 1.3rem;
+  padding: var(--spacing-xl);
   box-shadow: var(--shadow);
   animation: rise-in 520ms ease;
 }
@@ -236,11 +183,12 @@ body {
 
 .card-title {
   margin: 0;
-  font-family: 'Fraunces', Georgia, serif;
+  font-family: var(--font-serif);
   color: var(--ink-1);
-  font-size: 1.15rem;
+  font-size: var(--font-size-lg);
 }
 
+/* Timer */
 .timer {
   display: flex;
   flex-direction: column;
@@ -267,10 +215,10 @@ body {
   font-family: inherit;
   font-weight: 600;
   letter-spacing: 0.01em;
-  font-size: 0.8rem;
+  font-size: var(--font-size-sm);
   padding: 0.58rem 0.4rem;
   cursor: pointer;
-  transition: background 180ms ease, color 180ms ease;
+  transition: background var(--transition-base), color var(--transition-base);
 }
 
 .mode-tab.active {
@@ -308,7 +256,7 @@ body {
 }
 
 .timer-digits {
-  font-family: 'Fraunces', Georgia, serif;
+  font-family: var(--font-serif);
   font-size: 3.1rem;
   line-height: 1;
   letter-spacing: -0.035em;
@@ -342,7 +290,7 @@ body {
   font-family: inherit;
   font-weight: 600;
   cursor: pointer;
-  transition: transform 120ms ease, background 180ms ease, border-color 180ms ease;
+  transition: transform var(--transition-fast), background var(--transition-base), border-color var(--transition-base);
 }
 
 .ctrl-btn:hover:not(:disabled) {
@@ -361,6 +309,7 @@ body {
   color: white;
 }
 
+/* Tasks */
 .tasklist {
   display: flex;
   flex-direction: column;
@@ -401,7 +350,7 @@ body {
 .task-toolbar {
   display: flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: var(--spacing-sm);
   margin-bottom: 0.6rem;
 }
 
@@ -412,7 +361,7 @@ body {
   background: #f4f9f9;
   color: var(--ink-2);
   font-family: inherit;
-  font-size: 0.74rem;
+  font-size: var(--font-size-xs);
   padding: 0.34rem 0.65rem;
   text-transform: lowercase;
   cursor: pointer;
@@ -495,7 +444,7 @@ body {
 
 .task-text {
   color: var(--ink-1);
-  font-size: 0.9rem;
+  font-size: var(--font-size-base);
   text-align: left;
 }
 
@@ -518,6 +467,7 @@ body {
   font-size: 0.76rem;
 }
 
+/* Ambient */
 .ambient {
   display: flex;
   flex-direction: column;
@@ -542,7 +492,7 @@ body {
   gap: 0.2rem;
   position: relative;
   cursor: pointer;
-  transition: transform 120ms ease, border-color 120ms ease;
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
 }
 
 .sound-btn:hover {
@@ -560,7 +510,7 @@ body {
 }
 
 .sound-label {
-  font-size: 0.76rem;
+  font-size: var(--font-size-xs);
 }
 
 .playing-dot {
@@ -574,18 +524,6 @@ body {
   animation: pulse 1.3s ease-in-out infinite;
 }
 
-@keyframes pulse {
-  0%,
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.45;
-    transform: scale(0.82);
-  }
-}
-
 .ambient-status {
   margin: 0;
   color: var(--ink-2);
@@ -595,7 +533,7 @@ body {
 .volume-row {
   display: flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: var(--spacing-sm);
 }
 
 .vol-label {
@@ -622,23 +560,7 @@ body {
   box-shadow: 0 2px 8px rgba(215, 78, 28, 0.35);
 }
 
-@keyframes rise-in {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-button:focus-visible,
-input:focus-visible {
-  outline: 2px solid rgba(241, 100, 47, 0.35);
-  outline-offset: 2px;
-}
-
+/* Responsive */
 @media (max-width: 980px) {
   .overview {
     grid-template-columns: 1fr;

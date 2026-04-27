@@ -3,7 +3,6 @@ import Timer from './components/Timer'
 import TaskList from './components/TaskList'
 import AmbientPlayer from './components/AmbientPlayer'
 import StreakTracker from './components/StreakTracker'
-import './App.css'
 
 export type TimerMode = 'focus' | 'short' | 'long'
 
@@ -50,9 +49,7 @@ function readInitialState(): StoredState {
       tasks: Array.isArray(parsed.tasks) ? parsed.tasks : [],
       sessionCount: typeof parsed.sessionCount === 'number' ? parsed.sessionCount : 0,
       currentMode:
-        parsed.currentMode === 'focus' || parsed.currentMode === 'short' || parsed.currentMode === 'long'
-          ? parsed.currentMode
-          : 'focus',
+        parsed.currentMode === 'focus' || parsed.currentMode === 'short' || parsed.currentMode === 'long' ? parsed.currentMode : 'focus',
       activeTaskId: typeof parsed.activeTaskId === 'string' ? parsed.activeTaskId : null,
       focusMinutesToday: typeof parsed.focusMinutesToday === 'number' ? parsed.focusMinutesToday : 0,
       lastActiveDate: typeof parsed.lastActiveDate === 'string' ? parsed.lastActiveDate : getTodayStamp(),
