@@ -1,0 +1,124 @@
+.music-player {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.music-header {
+  margin-bottom: 16px;
+}
+
+.music-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.5px;
+}
+
+.music-content {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+  align-items: center;
+}
+
+.music-album {
+  flex-shrink: 0;
+}
+
+.music-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.track-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.track-artist {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.track-album {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.music-controls {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  align-items: center;
+}
+
+.btn-music {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.05);
+  background: rgba(255,255,255,0.03);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+.btn-music:hover {
+  background: rgba(255,255,255,0.08);
+  transform: scale(1.05);
+}
+
+.btn-music.primary {
+  width: 48px;
+  height: 48px;
+  background: var(--gradient-1);
+  border: none;
+  color: white;
+  box-shadow: 0 8px 24px rgba(108, 99, 255, 0.2);
+}
+
+.btn-music.primary:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 32px rgba(108, 99, 255, 0.3);
+}
+
+.music-player-placeholder {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.placeholder-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.placeholder-icon {
+  font-size: 48px;
+  margin-bottom: 8px;
+  opacity: 0.5;
+}
+
+.placeholder-content h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.placeholder-content p {
+  font-size: 14px;
+  color: var(--text-muted);
+}

@@ -1,0 +1,6 @@
+.app-container {
+  display: flex;
+  height: 100vh;
+  background: var(--dark-bg);
+  gap: 0;
+}

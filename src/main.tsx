@@ -1,12 +1,16 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './styles/variables.css'
-import './styles/base.css'
-import './styles/components.css'
-import App from './App.tsx'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import './index.css';
+import { SpotifyProvider } from './context/SpotifyContext';
+import { TimerProvider } from './context/TimerContext';
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <SpotifyProvider>
+      <TimerProvider>
+        <App />
+      </TimerProvider>
+    </SpotifyProvider>
+  </React.StrictMode>
+);
